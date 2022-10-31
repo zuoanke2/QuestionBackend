@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.QuestionBackend.mapper.AnswerMapper">
+    <insert id="writeAnswer" parameterType="com.QuestionBackend.model.AnswerVO">
+        INSERT INTO answer (userid, qid, opttext, result) VALUES (#{userId}, #{qId}, #{optionText}, #{result})
+    </insert>
+
+    <select id="statSingleSelectionNum" resultType="java.lang.Integer">
+        SELECT COUNT(opttext) from answer where opttext = #{optText} and qid = #{qId}
+    </select>
+
+
+</mapper>
