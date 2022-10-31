@@ -10,6 +10,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="QuestionBackend" />
+        <module name="test3" />
       </profile>
     </annotationProcessing>
   </component>
