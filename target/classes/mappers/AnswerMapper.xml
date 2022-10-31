@@ -2,8 +2,8 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test3.mapper.AnswerMapper">
-    <insert id="writeAnswer" parameterType="com.test3.model.AnswerVO">
+<mapper namespace="com.QuestionBackend.mapper.AnswerMapper">
+    <insert id="writeAnswer" parameterType="com.QuestionBackend.model.AnswerVO">
         INSERT INTO answer (userid, qid, opttext, result) VALUES (#{userId}, #{qId}, #{optionText}, #{result})
     </insert>
 

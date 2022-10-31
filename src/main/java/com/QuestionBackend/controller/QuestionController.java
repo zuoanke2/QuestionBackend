@@ -29,14 +29,14 @@ public class QuestionController {
     @PostMapping("/Answer")
     public ResultBean answerQuestion(@RequestBody AnswerVO answerVO) {
         String preAns = demoService.queryPreAns(answerVO.getqId());
-        if (!preAns.equals("null")) {
+        if (!preAns.equals("NA")) {
             if (preAns.equals(answerVO.getOptionText())) {
                 answerVO.setResult("Correct");
             } else {
                 answerVO.setResult("Incorrect");
             }
         } else {
-            answerVO.setResult("No result");
+            answerVO.setResult("NA");
         }
         ResultBean resultBean = new ResultBean();
         if (demoService.writeAnswer(answerVO) == 1 && answerVO.getType().equals("quiz")) {
