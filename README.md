@@ -11,7 +11,7 @@ You already done that
 6, run your DB.
 ### Open and run with IDE, take IDEA as an example (I highly recommend you to use IntelliJ IDEA!!!)
 1, open IDEA, click the Open button.  
-2, select the pom.xml file in the project floder, and click the Open as Project button.  
+2, select the pom.xml file in the project folder, and click the Open as Project button.  
 3, my database port is 3306, and my database name is test, if you set these the same with mine, you don't need to modify anything of the project files.  
 4, otherwise, please modify these parameters in the application.yml file in the resources folder.  
 5, IDEA has already integrated maven, so you don't need any configuration, just wait for maven automatically grab every library this project need.  
