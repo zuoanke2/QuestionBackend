@@ -11,7 +11,7 @@
  Target Server Version : 50719 (5.7.19)
  File Encoding         : 65001
 
- Date: 30/10/2022 23:19:09
+ Date: 31/10/2022 00:32:07
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `answer` (
   `opttext` varchar(1024) DEFAULT NULL,
   `result` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of answer
@@ -42,6 +42,7 @@ INSERT INTO `answer` (`id`, `userid`, `qid`, `opttext`, `result`) VALUES (25, '1
 INSERT INTO `answer` (`id`, `userid`, `qid`, `opttext`, `result`) VALUES (26, '2', 1, 'Falcons', 'Incorrect');
 INSERT INTO `answer` (`id`, `userid`, `qid`, `opttext`, `result`) VALUES (28, '2', 2, 'Nissan,Honda', 'NA');
 INSERT INTO `answer` (`id`, `userid`, `qid`, `opttext`, `result`) VALUES (29, '2', 3, 'Age:<18,Gander:Male', 'NA');
+INSERT INTO `answer` (`id`, `userid`, `qid`, `opttext`, `result`) VALUES (30, '2', 1, 'Patriots', 'Correct');
 COMMIT;
 
 -- ----------------------------
@@ -91,8 +92,6 @@ COMMIT;
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `uuid` varchar(255) NOT NULL,
-  `qidlist` varchar(255) DEFAULT NULL,
-  `siteid` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`uuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -100,11 +99,11 @@ CREATE TABLE `user` (
 -- Records of user
 -- ----------------------------
 BEGIN;
-INSERT INTO `user` (`uuid`, `qidlist`, `siteid`) VALUES ('1', NULL, NULL);
-INSERT INTO `user` (`uuid`, `qidlist`, `siteid`) VALUES ('2', NULL, NULL);
-INSERT INTO `user` (`uuid`, `qidlist`, `siteid`) VALUES ('3', NULL, NULL);
-INSERT INTO `user` (`uuid`, `qidlist`, `siteid`) VALUES ('4', NULL, NULL);
-INSERT INTO `user` (`uuid`, `qidlist`, `siteid`) VALUES ('5', NULL, NULL);
+INSERT INTO `user` (`uuid`) VALUES ('1');
+INSERT INTO `user` (`uuid`) VALUES ('2');
+INSERT INTO `user` (`uuid`) VALUES ('3');
+INSERT INTO `user` (`uuid`) VALUES ('4');
+INSERT INTO `user` (`uuid`) VALUES ('5');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
