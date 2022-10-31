@@ -13,7 +13,7 @@ You already done that
 1, open IDEA, click the Open button.  
 2, select the pom.xml file in the project floder, and click the Open as Project button.  
 3, my database port is 3306, and my database name is test, if you set these the same with mine, you don't need to modify anything of the project files.  
-4, otherwise, please modify these parameters in the application.yml file in the resources floder.  
+4, otherwise, please modify these parameters in the application.yml file in the resources folder.  
 5, IDEA has already integrated maven, so you don't need any configuration, just wait for maven automatically grab every library this project need.  
 6, when maven finish its job, just click the Run button of green color on the top bar of the window and it will run the DemoApplication.  
 7, now I beileve the backend service is running on 8080 port.  
